@@ -18,6 +18,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # User related APIs
     path("api/v1/accounts/", include("accountio.rest.urls.user")),
+    # Event related APIs
+    path("api/v1/events/", include("eventio.rest.urls.events")),
     # Swagger
     path("api/schema", SpectacularAPIView.as_view(), name="schema"),
     path(

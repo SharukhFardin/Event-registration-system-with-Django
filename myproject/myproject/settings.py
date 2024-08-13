@@ -42,7 +42,13 @@ INSTALLED_APPS = [
     "sharedio",
     "rest_framework",
     "rest_framework_simplejwt",
+    # "drf_spectacular",
+    # "versatileimagefield",
+    # "simple_history",
 ]
+
+# Set base auth user model
+AUTH_USER_MODEL = "accountio.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

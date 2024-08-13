@@ -7,6 +7,8 @@ from accountio.models import User
 
 
 class PublicUserRegistrationSerializer(serializers.Serializer):
+    """This serializer will be used to serialize data for User registration"""
+
     first_name = serializers.CharField(max_length=50, allow_blank=True, required=False)
     last_name = serializers.CharField(max_length=50, allow_blank=True, required=False)
     phone = PhoneNumberField(allow_blank=True, required=False)
@@ -31,3 +33,12 @@ class PublicUserRegistrationSerializer(serializers.Serializer):
         )
 
         return validated_data
+
+
+class UserAccountsSerializer(serializers.ModelSerializer):
+    """Serializer for showing all user accounts."""
+
+    class Meta:
+        model = User
+        fields = ("uid", "slug", "first_name", "last_name", "phone", "email", "status")
+        read_only_fields = fields

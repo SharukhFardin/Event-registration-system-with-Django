@@ -7,7 +7,7 @@ User = get_user_model()
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     model = User
-    list_display = ["uid", "first_name", "last_name", "phone"]
+    list_display = ["uid", "first_name", "last_name", "phone", "status"]
     list_filter = ["is_superuser", "is_staff", "status"]
     search_fields = ("phone", "first_name", "last_name")
     readonly_fields = ("password", "uid", "slug")

@@ -13,3 +13,4 @@ djangorestframework==3.14.0
 djangorestframework-simplejwt==5.3
 drf-spectacular==0.26.3
 phonenumbers==8.13.10
+django-filter==23.1

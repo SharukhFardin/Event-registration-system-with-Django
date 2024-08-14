@@ -10,7 +10,7 @@ urlpatterns = [
     path("", UserAccountList.as_view(), name="user_list"),
     path("<uuid:account_uid>", UserAccountRetrieve.as_view(), name="user_retrieve"),
     path(
-        "registration",
+        "user-registration",
         PublicUserRegistrationView.as_view(),
         name="user.onboarding",
     ),
